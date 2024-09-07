@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-09-04 10:39:27.111006",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_empleado_section",
+  "empleado",
+  "nombre_completo",
+  "puesto",
+  "column_break_6",
+  "agencia",
+  "fecha_de_ingreso",
+  "usuario",
+  "column_break_9",
+  "id_agencia",
+  "departamento",
+  "column_break_12",
+  "n\u00famero_de_documento",
+  "zona_rrhh",
+  "solicitud_section",
+  "fecha_de_renuncia",
+  "column_break_18",
+  "carta_firmada",
+  "amended_from",
+  "status",
+  "column_break_22",
+  "termino_de_contrato",
+  "grado_1",
+  "grado_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "SRA-"
+  },
+  {
+   "fieldname": "datos_de_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Empleado"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Nombre Completo"
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "label": "Puesto",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "agencia",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Data",
+   "label": "Fecha de Ingreso"
+  },
+  {
+   "fetch_from": "empleado.user_id",
+   "fieldname": "usuario",
+   "fieldtype": "Data",
+   "label": "Usuario",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.id_sucursal",
+   "fieldname": "id_agencia",
+   "fieldtype": "Data",
+   "label": "ID Agencia"
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "label": "Departamento"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "n\u00famero_de_documento",
+   "fieldtype": "Data",
+   "label": "N\u00famero de Documento"
+  },
+  {
+   "fetch_from": "empleado.zona_recursos",
+   "fieldname": "zona_rrhh",
+   "fieldtype": "Data",
+   "label": "Zona RRHH"
+  },
+  {
+   "fieldname": "solicitud_section",
+   "fieldtype": "Section Break",
+   "label": "Solicitud"
+  },
+  {
+   "description": "Complete est\u00e1 fecha indicando el d\u00eda en el que dejar\u00e1 sus labores el trabajador.",
+   "fieldname": "fecha_de_renuncia",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Renuncia",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "carta_firmada",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Carta Firmada",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud de Renuncia Anticipada",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Borrador\nValidado\nCancelado",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "termino_de_contrato",
+   "fieldtype": "Select",
+   "label": "Termino de Contrato",
+   "options": "\nTERMINO DE CONTRATO POR TRABAJADOR\nTERMINO DE CONTRATO POR JEFE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grado_1",
+   "fieldtype": "Data",
+   "label": "Grado 1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grado_2",
+   "fieldtype": "Data",
+   "label": "Grado 2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-15 11:34:52.532131",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud de Renuncia Anticipada",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo"
+}

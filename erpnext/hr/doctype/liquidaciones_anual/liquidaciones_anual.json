@@ -1,0 +1,284 @@
+{
+ "actions": [],
+ "autoname": "LIQ-.#####",
+ "creation": "2024-07-07 23:23:57.421617",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_del_empleado_section",
+  "employee",
+  "full_name",
+  "designation",
+  "zone",
+  "company",
+  "column_break_6",
+  "branch",
+  "entry_date",
+  "relief_date",
+  "pay_state",
+  "column_break_12",
+  "id_branch",
+  "department",
+  "birthdate",
+  "month",
+  "column_break_17",
+  "document",
+  "rrhh_zone",
+  "job_type",
+  "year",
+  "baja_del_trabajador_section",
+  "social_benefits_certificate",
+  "job_certificate",
+  "column_break_25",
+  "cts_letter",
+  "low_of_t",
+  "column_break_28",
+  "ticket",
+  "cese_form",
+  "column_break_31",
+  "guide_number",
+  "download_docs"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_del_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Empleado"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.nombre_completo",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Puesto",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.zona_nacional",
+   "fieldname": "zone",
+   "fieldtype": "Data",
+   "label": "Zona Nacional",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Compa\u00f1ia",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.fecha_de_ingreso_real",
+   "fieldname": "entry_date",
+   "fieldtype": "Date",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.fecha_de_relevo",
+   "fieldname": "relief_date",
+   "fieldtype": "Date",
+   "label": "Fecha de Relevo",
+   "read_only": 1
+  },
+  {
+   "default": "No Pagado",
+   "fieldname": "pay_state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado de Pago",
+   "options": "\nPagado\nNo Pagado"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.id_sucursal",
+   "fieldname": "id_branch",
+   "fieldtype": "Int",
+   "label": "ID Agencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Departamento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.date_of_birth",
+   "fieldname": "birthdate",
+   "fieldtype": "Date",
+   "label": "Fecha de Nacimiento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.passport_number",
+   "fieldname": "document",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "N\u00famero de Documento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.zona_recursos",
+   "fieldname": "rrhh_zone",
+   "fieldtype": "Data",
+   "label": "Zona RRHH",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employment_type",
+   "fieldname": "job_type",
+   "fieldtype": "Data",
+   "label": "Tipo de Empleo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Select",
+   "label": "A\u00f1o",
+   "options": "\n2024\n2025\n2026\n2027"
+  },
+  {
+   "fieldname": "baja_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Baja del Trabajador"
+  },
+  {
+   "fieldname": "social_benefits_certificate",
+   "fieldtype": "Attach",
+   "label": "Liquidacion de Beneficios Sociales Firmado"
+  },
+  {
+   "fieldname": "job_certificate",
+   "fieldtype": "Attach",
+   "label": "Certificado de Trabajo Firmado"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cts_letter",
+   "fieldtype": "Attach",
+   "label": "Carta de Liberacion de CTS"
+  },
+  {
+   "fieldname": "low_of_t",
+   "fieldtype": "Attach",
+   "label": "Baja de T Firmada"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Attach",
+   "label": "Boleta firmada"
+  },
+  {
+   "fieldname": "cese_form",
+   "fieldtype": "Attach",
+   "label": "Ficha de Cese"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "guide_number",
+   "fieldtype": "Int",
+   "label": "Numero de Guia"
+  },
+  {
+   "fieldname": "download_docs",
+   "fieldtype": "Button",
+   "label": "Descargar Documentos"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-08 17:15:05.885380",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Liquidaciones Anual",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

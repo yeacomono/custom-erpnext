@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "autoname": "INC-.######",
+ "creation": "2024-06-05 19:35:20.148331",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tipo_de_problema",
+  "column_break_2",
+  "asunto",
+  "estado",
+  "column_break_6",
+  "tipo_de_cierre",
+  "section_break_3",
+  "sucursal",
+  "column_break_5",
+  "id_sucursal",
+  "column_break_7",
+  "departamento",
+  "section_break_12",
+  "imagen",
+  "column_break_14",
+  "imagen_2",
+  "column_break_16",
+  "imagen_3",
+  "section_break_14",
+  "detalle_de_incidencia",
+  "section_break_20",
+  "section_break_22",
+  "detalles_de_la_solucion",
+  "reabrir",
+  "fechas_section",
+  "fecha_revisando",
+  "fecha_resuelto",
+  "fecha_cerrado",
+  "fecha_no_detallado",
+  "enviado"
+ ],
+ "fields": [
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "label": "Sucursal",
+   "options": "Branch",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "label": "id Sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "asunto",
+   "fieldtype": "Data",
+   "label": "Asunto",
+   "reqd": 1
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department",
+   "search_index": 1
+  },
+  {
+   "fieldname": "tipo_de_problema",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Tipo de Problema",
+   "options": "\nEmpresarial\nERP",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Abierto\nRevisando\nNo detallado correctamente\nResuelto\nCerrado\nPendiente de Informaci\u00f3n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "detalle_de_incidencia",
+   "fieldtype": "Text Editor",
+   "label": "Detalle de Incidencia",
+   "reqd": 1
+  },
+  {
+   "fieldname": "imagen",
+   "fieldtype": "Attach Image",
+   "label": "Imagen 1"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "imagen_2",
+   "fieldtype": "Attach Image",
+   "label": "Imagen 2"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "imagen_3",
+   "fieldtype": "Attach Image",
+   "label": "Imagen 3"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tipo_de_cierre",
+   "fieldtype": "Select",
+   "label": "Tipo de Cierre",
+   "options": "\nError de Sistemas\nMal Proceso\nProceso Administrativo\nCa\u00edda Masiva\nError en el requerimiento\nProblemas Tercero\nCierre, sin respuesta",
+   "permlevel": 2,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "detalles_de_la_solucion",
+   "fieldtype": "Text Editor",
+   "label": "Detalles de la solucion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reabrir",
+   "fieldtype": "Button",
+   "label": "Reabrir",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "fechas_section",
+   "fieldtype": "Section Break",
+   "label": "Fechas"
+  },
+  {
+   "fieldname": "fecha_revisando",
+   "fieldtype": "Datetime",
+   "label": "Fecha Revisando"
+  },
+  {
+   "fieldname": "fecha_resuelto",
+   "fieldtype": "Datetime",
+   "label": "Fecha Resuelto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_cerrado",
+   "fieldtype": "Datetime",
+   "label": "Fecha Cerrado",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_no_detallado",
+   "fieldtype": "Datetime",
+   "label": "Fecha No Detallado",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enviado",
+   "fieldtype": "Check",
+   "label": "Enviado"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-14 12:47:13.629974",
+ "modified_by": "Administrator",
+ "module": "Support",
+ "name": "Soporte Sistemas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_order": "DESC",
+ "title_field": "asunto",
+ "track_changes": 1
+}

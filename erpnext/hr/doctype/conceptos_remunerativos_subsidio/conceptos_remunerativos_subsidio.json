@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "creation": "2023-08-04 17:03:50.139027",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha_de_pago_section",
+  "n_mes",
+  "column_break_3",
+  "mes_ano",
+  "montos_de_pago_section",
+  "h_basico",
+  "column_break_7",
+  "asig_familiar",
+  "column_break_9",
+  "vacaciones",
+  "column_break_11",
+  "descanso_medico",
+  "pago_total_section",
+  "total_remuneraciones"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "n_mes",
+   "fieldtype": "Int",
+   "label": "N Mes"
+  },
+  {
+   "columns": 1,
+   "fieldname": "mes_ano",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mes Ano"
+  },
+  {
+   "columns": 1,
+   "fieldname": "h_basico",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "H Basico",
+   "precision": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "asig_familiar",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Asig Familiar",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_remuneraciones",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Remuneraciones",
+   "precision": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "vacaciones",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Vacaciones",
+   "precision": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "descanso_medico",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Descanso Medico",
+   "precision": "2"
+  },
+  {
+   "fieldname": "fecha_de_pago_section",
+   "fieldtype": "Section Break",
+   "label": "Fecha de Pago"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "montos_de_pago_section",
+   "fieldtype": "Section Break",
+   "label": "Montos de Pago"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pago_total_section",
+   "fieldtype": "Section Break",
+   "label": "Pago Total"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-30 10:29:52.007623",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Conceptos Remunerativos Subsidio",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

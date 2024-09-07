@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-03-11 13:04:41.265224",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_del_usuario_section",
+  "empleado",
+  "column_break_3",
+  "agencia",
+  "column_break_5",
+  "intento",
+  "naming_series",
+  "creacion"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_del_usuario_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del usuario"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "label": "Agencia",
+   "options": "Branch",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intento",
+   "fieldtype": "Data",
+   "label": "intento"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "HR-IM-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "label": "empleado",
+   "options": "Employee",
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "creacion",
+   "fieldtype": "Date",
+   "label": "creacion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-19 16:58:20.568711",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Intento de marcacion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

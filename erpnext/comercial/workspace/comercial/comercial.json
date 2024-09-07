@@ -1,0 +1,79 @@
+{
+ "cards_label": "COMERCIAL",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2024-02-26 16:55:58.145032",
+ "developer_mode_only": 0,
+ "disable_user_customization": 1,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 1,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Comercial",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MI ARCHIVO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "DOCUMENTOS GENERALES",
+   "link_to": "Documentos Generales Comercial",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPACITACI\u00d3N E INDUCCI\u00d3N",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ACTIVIDADES",
+   "link_to": "Actividades",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "EVALUACI\u00d3N COMERCIAL",
+   "link_to": "Evaluacion Comercial",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "FORMATO DE EVALUACI\u00d3N",
+   "link_to": "Formato de Evaluaciones",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-03-22 10:26:11.593709",
+ "modified_by": "edsona@larael.pe",
+ "module": "Comercial",
+ "name": "Comercial",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [],
+ "shortcuts_label": ""
+}

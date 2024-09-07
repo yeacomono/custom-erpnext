@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-08-15 09:33:48.419479",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_la_solicitud_section",
+  "fecha_de_envio",
+  "section_break_6",
+  "table_7"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "SN-"
+  },
+  {
+   "fieldname": "datos_de_la_solicitud_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Solicitud"
+  },
+  {
+   "fieldname": "fecha_de_envio",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fecha de Envio",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_7",
+   "fieldtype": "Table",
+   "options": "Tabla Solicitud Nacional"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-17 10:12:06.763397",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Solicitud Nacional",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,767 @@
+{
+ "actions": [],
+ "autoname": "SOL-PAG0-.#####",
+ "creation": "2022-09-08 15:16:34.044171",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "estado_general",
+  "section_break_2",
+  "fecha",
+  "proveedor",
+  "ruc",
+  "placa_de_vehiculo",
+  "solicitud_con_detraccion",
+  "solicitud_con_retencion",
+  "mes_servicio",
+  "mes_servicio_dhl",
+  "a\u00f1o_del_servicio",
+  "column_break_4",
+  "estado_de_validaci\u00f3n",
+  "validador",
+  "tipo_de_solicitud",
+  "porcentaje_de_detraccion_new",
+  "porcentaje_de_detraccion",
+  "factura_section",
+  "solicitud_viaticos_supervisores",
+  "monto_vi\u00e1tico_supervisores",
+  "concepto",
+  "concepto_rrhh",
+  "txt",
+  "cantidad_de_kilos",
+  "number_factura",
+  "n_serie",
+  "fecha_fac",
+  "monto_a_pagar",
+  "sucursal_de_solicitud",
+  "id_importacion",
+  "monto_pagado",
+  "monto_presupuestado",
+  "column_break_10",
+  "tipo_de_documento",
+  "costo_x_kilo",
+  "cuenta_con_factura",
+  "currency",
+  "cambio_dolares_soles",
+  "monto",
+  "documento",
+  "nro_guia",
+  "voucher",
+  "monto_facturado",
+  "datos_del_solicitante_section",
+  "empleado",
+  "puesto",
+  "nombre",
+  "sucursal",
+  "departamento",
+  "column_break_15",
+  "id_de_sucursal",
+  "zona",
+  "archivos_transados_section",
+  "archivos_transados",
+  "observaciones_section",
+  "table_30",
+  "retencion_section",
+  "solicitud_de_retencion",
+  "pago_section",
+  "fecha_de_pago",
+  "number_operations",
+  "nro_cuenta_de_pago",
+  "column_break_20",
+  "estado_documento",
+  "banco",
+  "usuario_que_registro_el_pago",
+  "voucher_de_pago",
+  "ver_documento",
+  "section_break_35",
+  "orden_de_compra",
+  "factura_de_compra",
+  "solicitud_de_detraccion",
+  "column_break_40",
+  "incidencia_empresarial",
+  "os_incidencia",
+  "pago_comision",
+  "datos_de_cuenta_en_soles_section",
+  "cuenta_en_soles",
+  "tipo_de_cuenta_soles",
+  "column_break_43",
+  "banco_soles",
+  "datos_de_cuenta_en_dolares_section",
+  "cuenta_en_d\u00f3lares",
+  "tipo_de_cuenta_d\u00f3lares",
+  "banco_d\u00f3lares",
+  "match_validacion",
+  "validator_section_section",
+  "response_validator"
+ ],
+ "fields": [
+  {
+   "default": "Abierto",
+   "fieldname": "estado_general",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Estado General",
+   "options": "Abierto\nAnulado",
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "proveedor",
+   "fieldtype": "Link",
+   "label": "Proveedor",
+   "options": "Supplier",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "proveedor.tax_id",
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "label": "RUC "
+  },
+  {
+   "depends_on": "eval: ( doc.concepto == \"Repuestos y Mant. al cr\u00e9dito\" || \r\ndoc.concepto == 'Repuestos y Mant. al contado')",
+   "fieldname": "placa_de_vehiculo",
+   "fieldtype": "Select",
+   "label": "Placa de Vehiculo",
+   "mandatory_depends_on": "eval: ( doc.concepto == \"Repuestos y Mant. al cr\u00e9dito\" || \r\ndoc.concepto == 'Repuestos y Mant. al contado')"
+  },
+  {
+   "default": "0",
+   "fieldname": "solicitud_con_detraccion",
+   "fieldtype": "Check",
+   "label": "Solicitud con Detraccion"
+  },
+  {
+   "default": "0",
+   "fieldname": "solicitud_con_retencion",
+   "fieldtype": "Check",
+   "label": "Solicitud con Retencion",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.ruc == 20341841357",
+   "fieldname": "mes_servicio",
+   "fieldtype": "Select",
+   "label": "Mes Servicio",
+   "options": "ENERO\nFEBRERO\nMARZO\nABRIL\nMAYO\nJUNIO\nJULIO\nAGOSTO\nSETIEMBRE\nOCTUBRE\nNOVIEMBRE\nDICIEMBRE",
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.ruc == 20101128777",
+   "fieldname": "mes_servicio_dhl",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mes del Servicio",
+   "mandatory_depends_on": "eval:doc.ruc == 20101128777",
+   "options": "ENERO\nFEBRERO\nMARZO\nABRIL\nMAYO\nJUNIO\nJULIO\nAGOSTO\nSETIEMBRE\nOCTUBRE\nNOVIEMBRE\nDICIEMBRE",
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.ruc == 20101128777",
+   "fieldname": "a\u00f1o_del_servicio",
+   "fieldtype": "Select",
+   "label": "A\u00f1o del Servicio",
+   "mandatory_depends_on": "eval:doc.ruc == 20101128777",
+   "options": "\n2023\n2024\n2025\n2026",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pendiente",
+   "fieldname": "estado_de_validaci\u00f3n",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado de validaci\u00f3n",
+   "options": "No requiere\nPendiente\nValidado\nRechazado",
+   "search_index": 1
+  },
+  {
+   "fieldname": "validador",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Validador",
+   "options": "Autom\u00e1tico\nFinanzas\nTransportes\nSupervisi\u00f3n Nacional\nGerencia\nRecursos Humanos",
+   "search_index": 1
+  },
+  {
+   "fieldname": "tipo_de_solicitud",
+   "fieldtype": "Select",
+   "label": "Tipo de Solicitud",
+   "options": "\nServicio\nProducto",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:(doc.solicitud_con !== undefined && doc.solicitud_con !== \"\" && doc.solicitud_con !== \"Recibo por Honorario\" )",
+   "description": "Recuerde que este campo solo admite valores enteros",
+   "fieldname": "porcentaje_de_detraccion_new",
+   "fieldtype": "Int",
+   "label": "Porcentaje de Detraccion",
+   "mandatory_depends_on": "eval:(doc.solicitud_con !== undefined && doc.solicitud_con !== \"\" && doc.solicitud_con !== \"Recibo por Honorario\" )",
+   "precision": "2"
+  },
+  {
+   "default": "4%",
+   "fieldname": "porcentaje_de_detraccion",
+   "fieldtype": "Select",
+   "label": "Porcentaje",
+   "options": "3%\n4%\n10%\n12%"
+  },
+  {
+   "fieldname": "factura_section",
+   "fieldtype": "Section Break",
+   "label": "FACTURA"
+  },
+  {
+   "depends_on": "eval:doc.concepto == \"Vi\u00e1ticos a Supervisores\"",
+   "fieldname": "solicitud_viaticos_supervisores",
+   "fieldtype": "Link",
+   "label": "Solicitud Vi\u00e1ticos Supervisores",
+   "options": "Viaticos a Supervisores"
+  },
+  {
+   "fetch_from": "solicitud_viaticos_supervisores.monto_general",
+   "fieldname": "monto_vi\u00e1tico_supervisores",
+   "fieldtype": "Data",
+   "label": "Monto Vi\u00e1tico Supervisores",
+   "read_only": 1
+  },
+  {
+   "fieldname": "concepto",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Concepto",
+   "options": "Alquiler Locales\nAlquiler Transporte de terceros\nAutodetracciones\nBeneficios sociales al personal\nCochera para veh\u00edculos\nCombustible\nCompra de Terreno\nCompra de Veh\u00edculos\nCompras a Solicitud\nCompras abastecimiento interno\nDeducible / Siniestros\nDetracci\u00f3n\nDevoluci\u00f3n clientes\nGasto de Construcci\u00f3n y Mantenimiento de locales\nGasto De Gerencia\nGastos Bancarios\nGastos de Alimentaci\u00f3n Huachipa\nGastos de Traslado de Personal\nImpuestos y tributos\nITF\nMultas / Sunafil\nOtros gastos de gesti\u00f3n\nPago a Concesionarios\nPagos Comercial\nPapeletas vehiculares\nPeajes\nPrestamos bancarios\nPr\u00e9stamo a Accionistas\nRepuestos y Mant. al contado\nRepuestos y Mant. al cr\u00e9dito\nSeguro para personal\nSeguros Vehiculares\nServ. Asesorias\nServ. Luz / Agua\nServ. Tecnologicos\nServ. Vigilancia\nServicio Aereo\nSueldos al mes al personal\nTransacci\u00f3n / Compensaciones\nTransferencia a cuentas propias\nTransferencia a las cajas agencias\nTransferencia de cuentas entre soles a d\u00f3lares o viceversa\nVi\u00e1ticos a Supervisores",
+   "search_index": 1
+  },
+  {
+   "fieldname": "concepto_rrhh",
+   "fieldtype": "Select",
+   "label": "Concepto RRHH",
+   "options": "Seleccionar\nNomina Salarial\nAdelantos\nApoyos\nLiquidaci\u00f3n\nUtilidades",
+   "permlevel": 3,
+   "search_index": 1
+  },
+  {
+   "description": "Cargar la TXT que descarg\u00f3 desde el ERP.",
+   "fieldname": "txt",
+   "fieldtype": "Attach",
+   "label": "TXT",
+   "permlevel": 3
+  },
+  {
+   "depends_on": "eval:doc.concepto == \"Alquiler Transporte de terceros\" && doc.departamento == 'Atenci\u00f3n al cliente - SE'",
+   "fieldname": "cantidad_de_kilos",
+   "fieldtype": "Float",
+   "label": "Cantidad de kilos"
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_documento != \"REQUERIMIENTO\"",
+   "fieldname": "number_factura",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Documento",
+   "length": 6,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_documento != \"REQUERIMIENTO\"",
+   "fieldname": "n_serie",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Serie",
+   "length": 4,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_documento != \"REQUERIMIENTO\"",
+   "fieldname": "fecha_fac",
+   "fieldtype": "Date",
+   "label": "Fecha de Emisi\u00f3n de Factura"
+  },
+  {
+   "fieldname": "monto_a_pagar",
+   "fieldtype": "Currency",
+   "label": "Monto a pagar",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sucursal_de_solicitud",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Sucursal de Solicitud",
+   "options": "Branch",
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.concepto == \"Compras abastecimiento interno\"",
+   "fieldname": "id_importacion",
+   "fieldtype": "Link",
+   "label": "Id importaciones",
+   "options": "Importaciones"
+  },
+  {
+   "fieldname": "monto_pagado",
+   "fieldtype": "Data",
+   "label": "Monto Pagado",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monto_presupuestado",
+   "fieldtype": "Data",
+   "label": "Monto Presupuestado",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_de_documento",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Tipo de Documento",
+   "options": "Seleccionar\nFACTURA DE VENTA\nBOLETA DE VENTA\nRECIBO POR HONORARIOS\nREQUERIMIENTO\nOTROS"
+  },
+  {
+   "depends_on": "eval:doc.concepto == \"Alquiler Transporte de terceros\" && doc.departamento == 'Atenci\u00f3n al cliente - SE'",
+   "fieldname": "costo_x_kilo",
+   "fieldtype": "Float",
+   "label": "Costo x kilo"
+  },
+  {
+   "default": "1",
+   "fieldname": "cuenta_con_factura",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Cuenta con Factura"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "cambio_dolares_soles",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Tasa cambio"
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Currency",
+   "in_preview": 1,
+   "label": "Monto",
+   "options": "currency",
+   "read_only_depends_on": "eval:doc.concepto == \"Seleccionar\" || (doc.concepto == \"Alquiler Transporte de terceros\" && doc.departamento == \"Atenci\u00f3n al cliente - SE\")"
+  },
+  {
+   "fieldname": "documento",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Documento / RUC"
+  },
+  {
+   "fieldname": "nro_guia",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "N\u00b0 Guia"
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_documento != \"REQUERIMIENTO\"",
+   "fieldname": "voucher",
+   "fieldtype": "Attach",
+   "label": "Documento"
+  },
+  {
+   "fieldname": "monto_facturado",
+   "fieldtype": "Currency",
+   "label": "Monto facturado",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "datos_del_solicitante_section",
+   "fieldtype": "Section Break",
+   "label": "DATOS DEL SOLICITANTE"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Puesto"
+  },
+  {
+   "fetch_from": "empleado.employee_name",
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Nombre"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Departamento",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_de_sucursal",
+   "fieldtype": "Data",
+   "label": "Id de Sucursal",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.zona_recursos_humanos",
+   "fieldname": "zona",
+   "fieldtype": "Data",
+   "label": "Zona"
+  },
+  {
+   "fieldname": "archivos_transados_section",
+   "fieldtype": "Section Break",
+   "label": "ARCHIVOS TRANSADOS"
+  },
+  {
+   "depends_on": "eval:doc.concepto == \"Transacci\u00f3n / Compensaciones\"",
+   "fieldname": "archivos_transados",
+   "fieldtype": "Table",
+   "options": "Archivos Transados"
+  },
+  {
+   "depends_on": "eval:doc.owner == \"Administrator\"",
+   "fieldname": "observaciones_section",
+   "fieldtype": "Section Break",
+   "label": "OBSERVACIONES "
+  },
+  {
+   "fieldname": "table_30",
+   "fieldtype": "Table",
+   "options": "List Observaciones"
+  },
+  {
+   "fieldname": "retencion_section",
+   "fieldtype": "Section Break",
+   "label": "RETENCI\u00d3N"
+  },
+  {
+   "fieldname": "solicitud_de_retencion",
+   "fieldtype": "Link",
+   "label": "Solicitud de Retencion",
+   "options": "Solicitud de Pagos Retencion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pago_section",
+   "fieldtype": "Section Break",
+   "label": "PAGO"
+  },
+  {
+   "fieldname": "fecha_de_pago",
+   "fieldtype": "Date",
+   "label": "Fecha de pago",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "number_operations",
+   "fieldtype": "Data",
+   "label": "N\u00b0 de Operacion",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "nro_cuenta_de_pago",
+   "fieldtype": "Data",
+   "label": "Nro Cuenta de Pago",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Por Pagar",
+   "fieldname": "estado_documento",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado Documento",
+   "options": "Por Pagar\nPagado\nPago Rechazado",
+   "permlevel": 2,
+   "search_index": 1
+  },
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "label": "Banco",
+   "options": "\nBCP\nBBVA\nCCI\nBANCO DE LA NACI\u00d3N\nBAN BIF\nSCOTIABANK\nPICHINCHA\nBANBIF",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "usuario_que_registro_el_pago",
+   "fieldtype": "Data",
+   "label": "Usuario que registro el pago",
+   "permlevel": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "voucher_de_pago",
+   "fieldtype": "Attach",
+   "label": "Documento de Pago",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "ver_documento",
+   "fieldtype": "Button",
+   "label": "Ver Documento"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break",
+   "label": "ENLACES"
+  },
+  {
+   "fieldname": "orden_de_compra",
+   "fieldtype": "Data",
+   "label": "Orden de Compra",
+   "read_only": 1
+  },
+  {
+   "fieldname": "factura_de_compra",
+   "fieldtype": "Data",
+   "label": "Factura de Compra",
+   "read_only": 1
+  },
+  {
+   "fieldname": "solicitud_de_detraccion",
+   "fieldtype": "Data",
+   "label": "Solicitud de Detraccion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incidencia_empresarial",
+   "fieldtype": "Data",
+   "label": "Incidencia Empresarial",
+   "read_only": 1
+  },
+  {
+   "fieldname": "os_incidencia",
+   "fieldtype": "Data",
+   "label": "OS Incidencia",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pago_comision",
+   "fieldtype": "Data",
+   "label": "Pago Comision",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.currency == \"PEN\"",
+   "fieldname": "datos_de_cuenta_en_soles_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de cuenta en soles"
+  },
+  {
+   "depends_on": "eval:doc.currency == \"PEN\"",
+   "fetch_from": "proveedor.cuenta_en_soles",
+   "fieldname": "cuenta_en_soles",
+   "fieldtype": "Data",
+   "label": "Cuenta en Soles"
+  },
+  {
+   "depends_on": "eval:doc.currency == \"PEN\"",
+   "fetch_from": "proveedor.tipo_de_cuenta_soles",
+   "fieldname": "tipo_de_cuenta_soles",
+   "fieldtype": "Select",
+   "label": "Tipo de Cuenta Soles",
+   "options": "---Seleccionar---\nAhorros\nCorriente\nInterbancario",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.currency == \"PEN\"",
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.currency == \"PEN\"",
+   "fetch_from": "proveedor.banco_soles",
+   "fieldname": "banco_soles",
+   "fieldtype": "Select",
+   "label": "Banco Soles",
+   "options": "---Seleccionar---\nBCP\nBBVA\nCCI\nBANCO DE LA NACI\u00d3N\nBAN BIF\nSCOTIABANK\nPICHINCHA\nBANBIF"
+  },
+  {
+   "collapsible_depends_on": "eval:doc.currency == \"USD\"",
+   "fieldname": "datos_de_cuenta_en_dolares_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de cuenta en dolares"
+  },
+  {
+   "depends_on": "eval:doc.currency == \"USD\"",
+   "fieldname": "cuenta_en_d\u00f3lares",
+   "fieldtype": "Data",
+   "label": "Cuenta en D\u00f3lares"
+  },
+  {
+   "depends_on": "eval:doc.currency == \"USD\"",
+   "fieldname": "tipo_de_cuenta_d\u00f3lares",
+   "fieldtype": "Select",
+   "label": "Tipo de Cuenta D\u00f3lares",
+   "options": "---Seleccionar---\nAhorros\nCorriente\nInterbancario"
+  },
+  {
+   "depends_on": "eval:doc.currency == \"USD\"",
+   "fieldname": "banco_d\u00f3lares",
+   "fieldtype": "Select",
+   "label": "Banco D\u00f3lares",
+   "options": "---Seleccionar---\nBCP\nBBVA\nCCI\nBANCO DE LA NACI\u00d3N\nBAN BIF\nSCOTIABANK\nPICHINCHA\nBANBIF"
+  },
+  {
+   "default": "NO",
+   "fieldname": "match_validacion",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Validaci\u00f3n Match",
+   "options": "OK\nNO\n0"
+  },
+  {
+   "fieldname": "validator_section_section",
+   "fieldtype": "Section Break",
+   "label": "Validator Section"
+  },
+  {
+   "fieldname": "response_validator",
+   "fieldtype": "Data",
+   "label": "Response Validator"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-13 13:28:12.502350",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Solicitud de Pagos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrador de agencia",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrador de agencia",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 2,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrador de agencia",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor Nacional",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Solicitador de Pagos",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

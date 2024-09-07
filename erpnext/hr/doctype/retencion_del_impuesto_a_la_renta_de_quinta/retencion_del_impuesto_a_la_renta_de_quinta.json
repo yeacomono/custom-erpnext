@@ -1,0 +1,676 @@
+{
+ "actions": [],
+ "autoname": "RETEN.#########",
+ "creation": "2024-05-29 19:53:09.929528",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "empleado",
+  "column_break_2",
+  "n_documento",
+  "column_break_4",
+  "nombre_completo",
+  "column_break_6",
+  "mes",
+  "section_break_4",
+  "remuneracion_mensual",
+  "asignacion_familiar",
+  "column_break_8",
+  "movilidad",
+  "horario_nocturno",
+  "column_break_10",
+  "gratificacion_julio",
+  "gratificacion_diciembre",
+  "column_break_12",
+  "n_meses_fin_a\u00f1o",
+  "remuneracion_anual_proyectada",
+  "remuneraciones_ordinarias_section",
+  "remuneracion_enero",
+  "remuneracion_julio",
+  "column_break_24",
+  "remuneracion_febrero",
+  "remuneracion_agosto",
+  "column_break_27",
+  "remuneracion_marzo",
+  "remuneracion_setiembre",
+  "column_break_30",
+  "remuneracion_abril",
+  "remuneracion_octubre",
+  "column_break_33",
+  "remuneracion_mayo",
+  "remuneracion_noviembre",
+  "column_break_36",
+  "remuneracion_junio",
+  "total_remun_ant",
+  "section_break_29",
+  "total_remun_perc_y_por_perc",
+  "column_break_41",
+  "d_7_uit",
+  "column_break_43",
+  "renta_neta_de_5ta",
+  "column_break_49",
+  "imp_anual_proy",
+  "escala_progresiva_section",
+  "hasta_5_uit",
+  "d_8porcen",
+  "column_break_51",
+  "de_5_a_20_uit",
+  "d_14_porcen",
+  "column_break_54",
+  "de_20_a_35_uit",
+  "d_17_porcen",
+  "column_break_57",
+  "de_35_a_45_uit",
+  "d_20_porcen",
+  "column_break_60",
+  "mas_de_45_uit",
+  "d_30_porcen",
+  "column_break_63",
+  "imp_rent_anul",
+  "deducciones_section",
+  "reten_enero",
+  "reten_julio",
+  "column_break_48",
+  "reten_febrero",
+  "reten_agosto",
+  "column_break_58",
+  "reten_marzo",
+  "reten_setiembre",
+  "column_break_65",
+  "reten_abril",
+  "reten_octubre",
+  "column_break_73",
+  "reten_mayo",
+  "reten_noviembre",
+  "column_break_78",
+  "reten_junio",
+  "total_reten_real",
+  "section_break_45",
+  "imp_anual_men_ret_real",
+  "column_break_75",
+  "ret_mes",
+  "retencion_marzo_section",
+  "utilidades_marzo",
+  "proy_anual_util",
+  "column_break_74",
+  "bonificacion_julio",
+  "rent_net_julio",
+  "column_break_76",
+  "bonificacion_diciembre",
+  "rent_net_diciembre",
+  "escala_progresiva_extraordinaria_section",
+  "hasta_5_uit_e",
+  "d_8porcen_e",
+  "column_break_103",
+  "de_5_a_20_uit_e",
+  "d_14_porcen_e",
+  "column_break_106",
+  "de_20_a_35_uit_e",
+  "d_17_porcen_e",
+  "column_break_109",
+  "de_35_a_45_uit_e",
+  "d_20_porcen_e",
+  "column_break_112",
+  "mas_de_45_uit_e",
+  "d_30_porcen_e",
+  "column_break_115",
+  "reten_net_util_mar",
+  "reten_extra"
+ ],
+ "fields": [
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.employee_name",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remuneracion_mensual",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Mensual"
+  },
+  {
+   "fieldname": "asignacion_familiar",
+   "fieldtype": "Currency",
+   "label": "Asignacion Familiar"
+  },
+  {
+   "fieldname": "movilidad",
+   "fieldtype": "Currency",
+   "label": "Movilidad"
+  },
+  {
+   "fieldname": "horario_nocturno",
+   "fieldtype": "Currency",
+   "label": "Horario Nocturno"
+  },
+  {
+   "fieldname": "gratificacion_julio",
+   "fieldtype": "Currency",
+   "label": "Gratificacion Julio"
+  },
+  {
+   "fieldname": "gratificacion_diciembre",
+   "fieldtype": "Currency",
+   "label": "Gratificacion Diciembre"
+  },
+  {
+   "fieldname": "n_meses_fin_a\u00f1o",
+   "fieldtype": "Int",
+   "label": "N\u00b0 de Meses que falta para fin de a\u00f1o"
+  },
+  {
+   "fieldname": "remuneracion_anual_proyectada",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Anual Proyectada"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "remuneraciones_ordinarias_section",
+   "fieldtype": "Section Break",
+   "label": "Remuneraciones Ordinarias"
+  },
+  {
+   "fieldname": "remuneracion_enero",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Enero"
+  },
+  {
+   "fieldname": "remuneracion_febrero",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Febrero"
+  },
+  {
+   "fieldname": "remuneracion_marzo",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Marzo"
+  },
+  {
+   "fieldname": "remuneracion_abril",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Abril"
+  },
+  {
+   "fieldname": "remuneracion_mayo",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Mayo"
+  },
+  {
+   "fieldname": "remuneracion_junio",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Junio"
+  },
+  {
+   "fieldname": "remuneracion_julio",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Julio"
+  },
+  {
+   "fieldname": "remuneracion_agosto",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Agosto"
+  },
+  {
+   "fieldname": "remuneracion_setiembre",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Setiembre"
+  },
+  {
+   "fieldname": "remuneracion_octubre",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Octubre"
+  },
+  {
+   "fieldname": "remuneracion_noviembre",
+   "fieldtype": "Currency",
+   "label": "Remuneracion Noviembre"
+  },
+  {
+   "fieldname": "total_remun_ant",
+   "fieldtype": "Currency",
+   "label": "Total Remuneraciones Anteriores"
+  },
+  {
+   "fieldname": "total_remun_perc_y_por_perc",
+   "fieldtype": "Currency",
+   "label": "Total Remun Perc y por perc"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "imp_anual_proy",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Impuesto Anual Proyectado"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "deducciones_section",
+   "fieldtype": "Section Break",
+   "label": "Deducciones"
+  },
+  {
+   "fieldname": "reten_enero",
+   "fieldtype": "Currency",
+   "label": "Retenciones Enero"
+  },
+  {
+   "fieldname": "reten_febrero",
+   "fieldtype": "Currency",
+   "label": "Retenciones Febrero"
+  },
+  {
+   "fieldname": "reten_marzo",
+   "fieldtype": "Currency",
+   "label": "Retenciones Marzo"
+  },
+  {
+   "fieldname": "reten_abril",
+   "fieldtype": "Currency",
+   "label": "Retenciones Abril"
+  },
+  {
+   "fieldname": "reten_mayo",
+   "fieldtype": "Currency",
+   "label": "Retenciones Mayo"
+  },
+  {
+   "fieldname": "reten_junio",
+   "fieldtype": "Currency",
+   "label": "Retenciones Junio"
+  },
+  {
+   "fieldname": "reten_julio",
+   "fieldtype": "Currency",
+   "label": "Retenciones Julio"
+  },
+  {
+   "fieldname": "reten_agosto",
+   "fieldtype": "Currency",
+   "label": "Retenciones Agosto"
+  },
+  {
+   "fieldname": "reten_setiembre",
+   "fieldtype": "Currency",
+   "label": "Retenciones Setiembre"
+  },
+  {
+   "fieldname": "reten_octubre",
+   "fieldtype": "Currency",
+   "label": "Retenciones Octubre"
+  },
+  {
+   "fieldname": "reten_noviembre",
+   "fieldtype": "Currency",
+   "label": "Retenciones Noviembre"
+  },
+  {
+   "fieldname": "total_reten_real",
+   "fieldtype": "Currency",
+   "label": "Total Retenciones Realizados"
+  },
+  {
+   "fieldname": "section_break_45",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "imp_anual_men_ret_real",
+   "fieldtype": "Currency",
+   "label": "Impuesto Anual Menos retenciones realizadas"
+  },
+  {
+   "fieldname": "ret_mes",
+   "fieldtype": "Currency",
+   "label": "Retencion del Mes"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_51",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_57",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_60",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_65",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "label": "Mes",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12"
+  },
+  {
+   "fieldname": "utilidades_marzo",
+   "fieldtype": "Currency",
+   "label": "Utilidades Marzo"
+  },
+  {
+   "fieldname": "bonificacion_julio",
+   "fieldtype": "Currency",
+   "label": "Bonificacion Julio"
+  },
+  {
+   "fieldname": "bonificacion_diciembre",
+   "fieldtype": "Currency",
+   "label": "Bonificacion Diciembre"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "retencion_marzo_section",
+   "fieldtype": "Section Break",
+   "label": "Retencion Marzo"
+  },
+  {
+   "fieldname": "rent_net_julio",
+   "fieldtype": "Currency",
+   "label": "Renta Neta Julio"
+  },
+  {
+   "fieldname": "proy_anual_util",
+   "fieldtype": "Currency",
+   "label": "Proyeccion Anual  + Utilidades"
+  },
+  {
+   "fieldname": "reten_net_util_mar",
+   "fieldtype": "Currency",
+   "label": "Retencion Neta Extraordinaria"
+  },
+  {
+   "fieldname": "column_break_74",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_76",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "escala_progresiva_section",
+   "fieldtype": "Section Break",
+   "label": "Escala Progresiva"
+  },
+  {
+   "fieldname": "hasta_5_uit",
+   "fieldtype": "Currency",
+   "label": "Hasta 5 UIT"
+  },
+  {
+   "fieldname": "column_break_58",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "de_5_a_20_uit",
+   "fieldtype": "Currency",
+   "label": "Mas de 5 a 20 UIT"
+  },
+  {
+   "fieldname": "de_20_a_35_uit",
+   "fieldtype": "Currency",
+   "label": "Mas de 20 a 35 UIT"
+  },
+  {
+   "fieldname": "column_break_75",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "de_35_a_45_uit",
+   "fieldtype": "Currency",
+   "label": "Mas de 35 a 45 UIT"
+  },
+  {
+   "fieldname": "column_break_73",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mas_de_45_uit",
+   "fieldtype": "Currency",
+   "label": "Mas de 45 UIT"
+  },
+  {
+   "fieldname": "column_break_78",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "imp_rent_anul",
+   "fieldtype": "Currency",
+   "label": "Impuesto a la Renta Anual a Pagar por el A\u00f1o en Curso"
+  },
+  {
+   "fieldname": "d_8porcen",
+   "fieldtype": "Currency",
+   "label": "8%"
+  },
+  {
+   "fieldname": "d_14_porcen",
+   "fieldtype": "Currency",
+   "label": "14 %"
+  },
+  {
+   "fieldname": "d_17_porcen",
+   "fieldtype": "Currency",
+   "label": "17 %"
+  },
+  {
+   "fieldname": "d_20_porcen",
+   "fieldtype": "Currency",
+   "label": "20 %"
+  },
+  {
+   "fieldname": "d_30_porcen",
+   "fieldtype": "Currency",
+   "label": "30 %"
+  },
+  {
+   "fieldname": "renta_neta_de_5ta",
+   "fieldtype": "Currency",
+   "label": "Renta Neta de 5ta"
+  },
+  {
+   "default": "34650",
+   "fieldname": "d_7_uit",
+   "fieldtype": "Currency",
+   "label": "7 UIT"
+  },
+  {
+   "fieldname": "escala_progresiva_extraordinaria_section",
+   "fieldtype": "Section Break",
+   "label": "Escala Progresiva Extraordinaria"
+  },
+  {
+   "fieldname": "hasta_5_uit_e",
+   "fieldtype": "Currency",
+   "label": "Hasta 5 UIT"
+  },
+  {
+   "fieldname": "d_8porcen_e",
+   "fieldtype": "Currency",
+   "label": "8%"
+  },
+  {
+   "fieldname": "column_break_103",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "de_5_a_20_uit_e",
+   "fieldtype": "Currency",
+   "label": "Mas de 5 a 20 UIT"
+  },
+  {
+   "fieldname": "d_14_porcen_e",
+   "fieldtype": "Currency",
+   "label": "14%"
+  },
+  {
+   "fieldname": "column_break_106",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "de_20_a_35_uit_e",
+   "fieldtype": "Currency",
+   "label": "Mas de 20 a 35 UIT"
+  },
+  {
+   "fieldname": "d_17_porcen_e",
+   "fieldtype": "Currency",
+   "label": "17%"
+  },
+  {
+   "fieldname": "column_break_109",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "de_35_a_45_uit_e",
+   "fieldtype": "Currency",
+   "label": "Mas de 35 a 45 UIT"
+  },
+  {
+   "fieldname": "d_20_porcen_e",
+   "fieldtype": "Currency",
+   "label": "20%"
+  },
+  {
+   "fieldname": "column_break_112",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mas_de_45_uit_e",
+   "fieldtype": "Currency",
+   "label": "Mas de 45 UIT"
+  },
+  {
+   "fieldname": "d_30_porcen_e",
+   "fieldtype": "Currency",
+   "label": "30%"
+  },
+  {
+   "fieldname": "column_break_115",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reten_extra",
+   "fieldtype": "Currency",
+   "label": "Retencion Extraordinaria"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "n_documento",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Documento"
+  },
+  {
+   "fieldname": "rent_net_diciembre",
+   "fieldtype": "Currency",
+   "label": "Renta Neta Diciembre"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-31 15:31:04.739255",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Retencion del Impuesto a la Renta de Quinta",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

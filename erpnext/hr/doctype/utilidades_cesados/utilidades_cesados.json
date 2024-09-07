@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "creation": "2024-04-12 17:47:42.193169",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "h2documento_de_identidadh2_section",
+  "dni",
+  "h2documentoh2",
+  "documento",
+  "dni_vigente",
+  "h2informaci\u00f3n_de_pagoh2",
+  "banco",
+  "n\u00famero_de_cuenta",
+  "n\u00famero_de_celular"
+ ],
+ "fields": [
+  {
+   "fieldname": "h2documento_de_identidadh2_section",
+   "fieldtype": "Section Break",
+   "label": "<h2>Documento de Identidad</h2>"
+  },
+  {
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dni",
+   "reqd": 1
+  },
+  {
+   "fieldname": "h2documentoh2",
+   "fieldtype": "Section Break",
+   "label": "<h2>Documento</h2>"
+  },
+  {
+   "description": "<p style=\"margin-top: 8px;\">\n  El n\u00famero de cuenta debe estar a su nombre.<br>\n  Si el banco seleccionado es Interbank o Scotiabank, debe colocar el CCI (N\u00famero de cuenta interbancaria).\n</p>\n",
+   "fieldname": "documento",
+   "fieldtype": "Attach",
+   "label": "Documento",
+   "reqd": 1
+  },
+  {
+   "fieldname": "h2informaci\u00f3n_de_pagoh2",
+   "fieldtype": "Section Break",
+   "label": "<h2>Informaci\u00f3n de Pago</h2>"
+  },
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Banco",
+   "options": "\nBanco de Cr\u00e9dito del Per\u00fa\nInterbank\nCitibank del Per\u00fa\nScotiabank Per\u00fa\nBBVA Banco Continental\nBanco de la Nacion\nBanco Falabella\nBanco de Comercio\nBanco Pichincha\nBanco Interamericano de Finanzas\nCrediscotia Financiera\nBanco GNB\nSantander\nBanzo Azteca\nBanco Cencosud\nBanco Ripley\nICBC Per\u00fa Bank\nMiBanco\nFinanc. Credinka\nFinanc. ProEmpresa\nFinanc. Confianza\nCrediRaiz\nCompartamos Financiera\nFinanciera Qapaq\nFinanciera TFC S A\nFinanciera Efectiva\nAmerika Financiera\nFinanciera OH!\nCaja Metropolitana de Lima\nCMAC Trujillo\nCMAC Arequipa\nCMAC Sullana\nCMAC Cusco\nCMAC Huancayo\nCMAC Tacna\nCMAC Del Santa\nCMAC Ica\nCMAC Piura\nCMAC Maynas\nCMAC Paita\nCRAC Sipan\nCRAC Del Centro\nCRAC Incasur\nCRAC Prymera\nCRAC Los Andres",
+   "reqd": 1
+  },
+  {
+   "description": "<p style=\"margin-top: 8px;\">\n  El n\u00famero de cuenta debe estar a su nombre.<br>\n  Si el banco seleccionado es Interbank o Scotiabank, debe colocar el CCI (N\u00famero de cuenta interbancaria).\n</p>\n",
+   "fieldname": "n\u00famero_de_cuenta",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00famero de cuenta",
+   "reqd": 1
+  },
+  {
+   "fieldname": "n\u00famero_de_celular",
+   "fieldtype": "Int",
+   "label": "N\u00famero de celular",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dni_vigente",
+   "fieldtype": "Attach",
+   "label": "Dni Vigente"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-18 09:52:01.643800",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Utilidades Cesados",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

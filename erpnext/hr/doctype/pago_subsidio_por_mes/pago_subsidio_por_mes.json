@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2023-08-04 17:06:11.427223",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mes",
+  "dias_subsidiados",
+  "pago_adelantado",
+  "estado",
+  "numero_nitt",
+  "numero_expediente",
+  "fecha_de_pago",
+  "vacaciones"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "columns": 1,
+   "fieldname": "dias_subsidiados",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Dias Subsidiados"
+  },
+  {
+   "columns": 1,
+   "fieldname": "pago_adelantado",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Pago Adelantado",
+   "precision": "2"
+  },
+  {
+   "columns": 1,
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estado",
+   "options": "\nPagado\nPendiente"
+  },
+  {
+   "columns": 1,
+   "fieldname": "fecha_de_pago",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Pago"
+  },
+  {
+   "columns": 2,
+   "fieldname": "numero_nitt",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00ba de NITT"
+  },
+  {
+   "columns": 2,
+   "fieldname": "numero_expediente",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00ba de Expediente"
+  },
+  {
+   "fieldname": "vacaciones",
+   "fieldtype": "Float",
+   "label": "Vacaciones"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-05 09:35:53.059476",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Pago Subsidio por Mes",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

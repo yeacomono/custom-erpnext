@@ -1,0 +1,44 @@
+{
+ "cards_label": "Legal",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2024-04-16 12:42:32.913318",
+ "developer_mode_only": 0,
+ "disable_user_customization": 1,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 1,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Legal",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Documentos",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Seguimiento de Consultas",
+   "link_to": "Seguimiento de Consultas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-04-16 13:05:08.494115",
+ "modified_by": "ingaamable@gmail.com",
+ "module": "Prevencion",
+ "name": "Legal",
+ "owner": "ingaamable@gmail.com",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [],
+ "shortcuts_label": ""
+}

@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "creation": "2017-12-09 18:54:50.562438",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "barcode_type",
+  "barcode"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "barcode_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Barcode Type",
+   "options": "\nEAN\nUPC-A"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 2,
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "barcode",
+   "unique": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-07 16:17:17.720164",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Item Barcode",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,162 @@
+{
+ "cards_label": "Sistema de Gestion Integrado",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2024-04-08 15:40:03.370789",
+ "developer_mode_only": 0,
+ "disable_user_customization": 1,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 1,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Redes y Gesti\u00f3n Interna",
+ "links": [
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "MI ARCHIVO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Documentos Generales",
+   "link_to": "Documentos Generales Redes y Gestion Interna",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "PETS Gestion Interna",
+   "link_to": "PETS Gestion Interna",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "L\u00edneas y Equipos Celulares",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Lista de L\u00edneas Celulares",
+   "link_to": "Lineas moviles 2",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Solicitud de L\u00edneas Celulares",
+   "link_to": "Solicitud de lineas celulares",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Solicitud de Equipos Celulares",
+   "link_to": "Solicitud de Equipos Celulares",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Servicios de Internet",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Lista de Servicios de Internet",
+   "link_to": "Lista de Servicios de Internet",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Solicitud de Internet Fijo",
+   "link_to": "Solicitud de Internet Fisico",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Gesti\u00f3n de Calidad",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Documentos Sig - Calidad",
+   "link_to": "Documentos SIG Calidad",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Gestion de Responsabilidad Social",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_inspection": 0,
+   "is_query_report": 0,
+   "label": "Documentos SIG-Responsabilidad Social",
+   "link_to": "Documentos SIG Responsabilidad Social",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-21 17:30:31.907393",
+ "modified_by": "cegaje17@gmail.com",
+ "module": "Redes y Gesti\u00f3n Interna",
+ "name": "Redes y Gesti\u00f3n Interna",
+ "owner": "edsona@larael.pe",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [],
+ "shortcuts_label": ""
+}

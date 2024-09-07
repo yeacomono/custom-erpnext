@@ -1,0 +1,44 @@
+{
+ "cards_label": "PREVENCION",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2024-03-06 16:14:42.951925",
+ "developer_mode_only": 0,
+ "disable_user_customization": 1,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 1,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Prevencion",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MI ARCHIVO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "DOCUMENTOS GENERALES",
+   "link_to": "Documentos Generales Prevencion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-03-06 19:13:51.306912",
+ "modified_by": "Administrator",
+ "module": "Prevencion",
+ "name": "Prevencion",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [],
+ "shortcuts_label": ""
+}

@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-12-14 14:56:15.736469",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_1",
+  "empleado",
+  "nombre_completo",
+  "data_5",
+  "dni",
+  "departamento",
+  "data_8",
+  "sucursal",
+  "column_break_9",
+  "data_10",
+  "column_break_11",
+  "zona_nacional",
+  "zona",
+  "data_11",
+  "data_12",
+  "column_break_15",
+  "a\u00f1o",
+  "section_break_17",
+  "tabla",
+  "amended_from",
+  "estado_de_documento",
+  "fecha_actualizacion"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "SOL-REN-"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": " Informaci\u00f3n Encargado"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "label": "Encargado",
+   "options": "Employee",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "DNI",
+   "read_only": 1
+  },
+  {
+   "default": "Operaciones - SE",
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Departamento ",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_8",
+   "fieldtype": "Section Break",
+   "label": "Informacion Sucursal",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "data_10",
+   "fieldtype": "Data",
+   "label": "ID Sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.zona_emp",
+   "fieldname": "zona",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Zona",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_11",
+   "fieldtype": "Section Break",
+   "label": "Ajustes Solicitados",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "data_12",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "Enero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre",
+   "permlevel": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2024",
+   "fieldname": "a\u00f1o",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "2024\n2023",
+   "permlevel": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tabla",
+   "fieldtype": "Table",
+   "label": "Tabla",
+   "options": "Trabajadores pendiete de renovar"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud de Renovaciones",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "estado_de_documento",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Estado de Documento",
+   "options": "Borrador\nPendiente de Validar\nValidado\nCancelado",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fecha_actualizacion",
+   "fieldtype": "Date",
+   "label": "Fecha Actualizacion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-09 13:55:01.238052",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud de Renovaciones",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "sucursal",
+ "track_changes": 1
+}

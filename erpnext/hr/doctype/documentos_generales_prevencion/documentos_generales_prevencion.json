@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-03-06 15:13:40.475017",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "nombre",
+  "codigo",
+  "fecha_de_creaci\u00f3n",
+  "column_break_3",
+  "version",
+  "adjuntar",
+  "ver_documento",
+  "column_break_6",
+  "descarga_archivo",
+  "section_break_9",
+  "control_de_cambios_y_revisiones",
+  "doctype_ssoma",
+  "prueba_eliminar"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "DSS-"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "codigo",
+   "fieldtype": "Data",
+   "label": "Codigo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_de_creaci\u00f3n",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Aprobaci\u00f3n",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "adjuntar",
+   "fieldtype": "Attach",
+   "label": "Adjuntar",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ver_documento",
+   "fieldtype": "Button",
+   "label": "Ver Documento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "descarga_archivo",
+   "fieldtype": "Button",
+   "label": "Descarga Archivo",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "control_de_cambios_y_revisiones",
+   "fieldtype": "Table",
+   "label": "Control de Cambios y Revisiones",
+   "options": "Control de Cambios y Revisiones"
+  },
+  {
+   "fieldname": "doctype_ssoma",
+   "fieldtype": "Link",
+   "label": "Doctype Ssoma",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "prueba_eliminar",
+   "fieldtype": "Data",
+   "label": "PRUEBA ELIMINAR",
+   "permlevel": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-06 15:13:40.475017",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Documentos Generales Prevencion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

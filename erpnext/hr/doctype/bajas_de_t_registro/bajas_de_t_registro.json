@@ -1,0 +1,261 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-07-04 13:59:28.530562",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_del_empleado_section",
+  "id_empleado",
+  "nombre_completo",
+  "puesto",
+  "compania",
+  "column_break_6",
+  "agencia",
+  "zona_nacional",
+  "fecha_de_ingreso",
+  "fecha_de_relevo",
+  "column_break_10",
+  "id_agencia",
+  "departamento",
+  "fecha_de_nacimiento",
+  "mes",
+  "column_break_14",
+  "numero_de_documento",
+  "zona_rrhh",
+  "tipo_de_empleo",
+  "ano",
+  "baja_del_trabajador_section",
+  "baja_archivo",
+  "descargar_baja",
+  "column_break_25",
+  "estado_del_documento",
+  "amended_fromx",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "BTR-"
+  },
+  {
+   "fieldname": "datos_del_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Empleado"
+  },
+  {
+   "fieldname": "id_empleado",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ID Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "id_empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Puesto",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.company",
+   "fieldname": "compania",
+   "fieldtype": "Link",
+   "label": "Compa\u00f1ia",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.branch",
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.fecha_de_relevo",
+   "fieldname": "fecha_de_relevo",
+   "fieldtype": "Date",
+   "label": "Fecha de Relevo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "agencia.ideentificador",
+   "fieldname": "id_agencia",
+   "fieldtype": "Data",
+   "label": "ID Agencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.date_of_birth",
+   "fieldname": "fecha_de_nacimiento",
+   "fieldtype": "Date",
+   "label": "Fecha de Nacimiento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.passport_number",
+   "fieldname": "numero_de_documento",
+   "fieldtype": "Data",
+   "label": "Numero de Documento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.zona_recursos",
+   "fieldname": "zona_rrhh",
+   "fieldtype": "Data",
+   "label": "Zona RRHH",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.employment_type",
+   "fieldname": "tipo_de_empleo",
+   "fieldtype": "Link",
+   "label": "Tipo de Empleo",
+   "options": "Employment Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ano",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "\n2024\n2025\n2026\n2027\n2028"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "baja_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Baja del Trabajador"
+  },
+  {
+   "fieldname": "baja_archivo",
+   "fieldtype": "Attach",
+   "label": "Baja Archivo"
+  },
+  {
+   "fieldname": "descargar_baja",
+   "fieldtype": "Button",
+   "label": "Descargar Baja"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Borrador",
+   "fieldname": "estado_del_documento",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Estado del Documento",
+   "options": "Borrador\nValidado"
+  },
+  {
+   "fieldname": "amended_fromx",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bajas de T Registro",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bajas de T Registro",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-05 16:21:59.233346",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Bajas de T Registro",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

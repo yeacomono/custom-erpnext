@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-04-23 15:13:08.090022",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_del_trabajador_section",
+  "trabajador",
+  "company",
+  "departamento",
+  "column_break_5",
+  "nombre_completo",
+  "cargo",
+  "fecha_de_ingreso",
+  "column_break_8",
+  "jornada",
+  "dni",
+  "sucursal"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del trabajador"
+  },
+  {
+   "fieldname": "trabajador",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trabajador",
+   "options": "Employee",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "trabajador.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Compa\u00f1ia",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "trabajador.department",
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trabajador.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "trabajador.designation",
+   "fieldname": "cargo",
+   "fieldtype": "Link",
+   "label": "Cargo",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "trabajador.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de ingreso",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trabajador.employment_type",
+   "fieldname": "jornada",
+   "fieldtype": "Link",
+   "label": "Jornada",
+   "options": "Employment Type",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "trabajador.passport_number",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "DNI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "trabajador.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "SI-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-20 17:16:07.756595",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud de indeterminados",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "trabajador",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo",
+ "track_changes": 1
+}
